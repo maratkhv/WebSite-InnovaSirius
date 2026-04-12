@@ -5,8 +5,9 @@
 }
 
 .problems__container{
-  justify-content: center; /* Центрирует саму сетку */
-  justify-items: center;    /* Центрирует карточки внутри ячеек */
+  justify-content: center;
+  justify-items: center;
+  padding: 0 0 0 10px;
 }
 
 .problems__title {
