@@ -2,7 +2,7 @@ import React from 'react';
 import './Hero.css';
 import sensorImg from '../assets/photos/main1.png';
 import shapeSvg from '../assets/svg/Union2.svg';
-import logo from '../assets/svg/logo.svg';
+import logo from '../assets/svg/Logo.svg';
 import shapeMobileSvg from '../assets/svg/Union3.svg'
 
 const scrollToForm = () => {
@@ -23,7 +23,7 @@ export default function Hero() {
         
         <div className="hero__card-wrapper">
           <img src={shapeSvg} alt="" className="hero__shape hero__shape--desktop" />
-          <img src={shapeMobileSvg} preserveAspectRatio="none" alt="" className="hero__shape hero__shape--mobile" />
+          <img src={shapeMobileSvg} alt="" className="hero__shape hero__shape--mobile" />
 
           <div className="hero__content-overlay"> 
             <div className="hero__text-block">
