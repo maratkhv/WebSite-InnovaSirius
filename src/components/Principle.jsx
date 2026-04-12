@@ -21,7 +21,7 @@ const Arrow = () => (
 export default function Principle() {
   return (
     <section className="principle">
-      <div className="principle__container">
+      <div className="container principle__container">
         <h2 className="principle__title">Принцип работы устройства</h2>
         <p className="principle__subtitle">
           Для более детальной информации наведите на карточку

@@ -4,6 +4,11 @@
   background-color: #fff;
 }
 
+.problems__container{
+  justify-content: center; /* Центрирует саму сетку */
+  justify-items: center;    /* Центрирует карточки внутри ячеек */
+}
+
 .problems__title {
   width: 90%;
   font-family: 'TT Travels';

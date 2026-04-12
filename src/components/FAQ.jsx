@@ -45,7 +45,7 @@ export default function FAQ() {
 
   return (
     <section className="faq">
-      <div className="faq__container">
+      <div className="container faq__container">
         <h2 className="faq__title">Распространенные<br />вопросы о ДЭС</h2>
         
         <div className="faq__list">

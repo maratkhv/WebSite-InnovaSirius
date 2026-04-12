@@ -36,14 +36,13 @@ const problemsData = [
 export default function Problems() {
   return (
     <section className="problems">
-      <div className="container">
+      <div className="container problems__container">
         <h2 className="problems__title">
           Курение есть <br /> Мониторинга — нет
         </h2>
 
         <div className="problems__grid">
           {problemsData.map((item, index) => (
-            // Передаем данные в отдельный компонент карточки
             <ProblemCard key={index} item={item} index={index} />
           ))}
         </div>

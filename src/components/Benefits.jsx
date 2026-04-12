@@ -26,7 +26,7 @@ const benefitsData = [
 export default function Benefits() {
   return (
     <section className="benefits">
-      <div className="benefits__container">
+      <div className="container benefits__container">
         <h2 className="benefits__main-title">Преимущества ДЭС</h2>
         <div className="benefits__grid">
           {benefitsData.map((benefit, index) => (

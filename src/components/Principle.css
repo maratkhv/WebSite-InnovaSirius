@@ -1,16 +1,12 @@
-
 .principle {
   width: 100%;
   padding: 50px 3vw;
   background-color: #fff;
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
 }
 
 .principle__container {
-  width: 100%;
-  max-width: 1600px;
   display: flex;
   flex-direction: column;
   align-items: center;

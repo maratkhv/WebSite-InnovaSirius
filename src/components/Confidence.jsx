@@ -9,7 +9,7 @@ export default function Confidence() {
 
   return (
     <section className="conf">
-      <div className="conf__container">
+      <div className="container conf__container">
         <p className="conf__title">Нам доверяют</p>
         <div className="conf__list">
           {logos.map((logo, index) => (

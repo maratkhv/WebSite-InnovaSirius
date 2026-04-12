@@ -15,7 +15,7 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <div className="footer__container">
+      <div className="container footer__container">
         <div className="footer__top">
           <div className="footer__info">
             <h2 className="footer__title">Контакты</h2>

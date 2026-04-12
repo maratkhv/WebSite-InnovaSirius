@@ -33,9 +33,23 @@
   font-style: normal;
 }
 
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'TT Travels', 'Helvetica';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto; 
+  width: 100%;      
+  padding: 0 20px;   
+  box-sizing: border-box; 
 }
