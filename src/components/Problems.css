@@ -1,0 +1,143 @@
+.problems {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.problems__title {
+  width: 90%;
+  font-family: 'TT Travels';
+  font-size: clamp(25px, 4vw, 56px);
+  line-height: 1.1;
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+
+.problems__grid {
+  width: 90%;
+  max-width: 1600px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5vw;
+}
+
+.card-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.card-3 {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.card-4 {
+  grid-column: 2;
+}
+
+.problems__card {
+  position: relative;
+  border: 2px solid;
+  border-radius: 40px;
+  padding: 20px 25px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  cursor: default;
+}
+
+.problems__card-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#ffffff 60%, #CCDFFF 90%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.problems__card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.problems__icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.5vw;
+  width: 100%;
+}
+
+.problems__static-icon {
+  width: clamp(40px, 5vw, 100px);
+  object-fit: contain;
+  display: block;
+}
+
+.problems__card-title {
+  font-family: 'TT Travels', sans-serif;
+  font-size: clamp(16px, 2.5vw, 30px);
+  font-weight: 500;
+  margin-bottom: 1.5vw;
+}
+
+.problems__card-text {
+  font-size: clamp(8px, 1.2vw, 18px);
+}
+
+.problems__card:hover .problems__card-bg {
+  opacity: 1;
+}
+
+@media (max-width: 1300px) {
+  
+  .problems__grid {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+  }
+  
+  .card-1, .card-2, .card-3, .card-4, .card-5 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .problems__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .problems__card {
+    border-radius: 30px;
+  }
+  .problems__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .problems__icon-container {
+  justify-content: center;
+  }
+
+  .problems__card-title,
+  .problems__card-text {
+  text-align: center;
+  }
+  .problems__card:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    justify-self: center;
+  }
+
+  .problems__card:hover .problems__card-bg {
+    opacity: 0;
+  }
+  
+  .problems__card.is-active .problems__card-bg {
+    opacity: 1; 
+  }
+}

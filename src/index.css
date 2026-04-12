@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'TT Travels';
+  src: url('./assets/fonts/TT\ Travels\ Trial\ Medium.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Travels';
+  src: url('./assets/fonts/TT\ Travels\ Trial\ Bold.otf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Travels';
+  src: url('./assets/fonts/TT\ Travels\ Trial\ DemiBold.otf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('./assets/fonts/helvetica_regular.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('./assets/fonts/helvetica_bold.otf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'TT Travels', 'Helvetica';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

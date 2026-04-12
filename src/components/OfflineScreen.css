@@ -1,0 +1,92 @@
+.offline-screen {
+  position: fixed;
+  inset: 0;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  z-index: 10000;
+  font-family: 'TT Travels', sans-serif;
+}
+
+/* --- ШАПКА --- */
+.offline-header {
+  width: 100%;
+  padding-top: 27px;
+}
+
+.offline-header__content {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.offline-logo {
+  height: clamp(30px, 4vw, 50px);
+}
+
+.offline-line {
+  justify-items: normal;
+  max-width: 100%;
+  border-top: 3px solid black;
+  opacity: 0.6;
+  margin: 0 60px;
+}
+
+/* --- КОНТЕНТ --- */
+.offline-main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.offline-content {
+  text-align: center;
+  /* Убираем лишние отступы, чтобы было как на макете */
+  margin-top: -10vh; 
+}
+
+.offline-title {
+  font-size: clamp(20px, 2.5vw, 32px);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 35px;
+  letter-spacing: -0.5px;
+}
+
+/* --- КНОПКА-ТАБЛЕТКА --- */
+.offline-btn {
+  background-color: #111111; /* Глубокий черный */
+  color: #ffffff;
+  border: none;
+  border-radius: 100px; /* Делает кнопку овальной "таблеткой" */
+  padding: 16px 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.offline-btn:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.offline-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .offline-title {
+    font-size: 22px;
+    padding: 0 20px;
+  }
+  
+  .offline-btn {
+    width: 80%;
+    padding: 14px 30px;
+  }
+}

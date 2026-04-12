@@ -1,0 +1,85 @@
+.benefits {
+  padding: clamp(50px, 8vw, 120px) 2vw;
+  background-color: #fff;
+  font-family: 'TT Travels';
+}
+
+.benefits__container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.benefits__main-title {
+  font-size: clamp(25px, 4vw, 56px);
+  font-weight: 400;
+  margin-bottom: clamp(40px, 4vw, 80px);
+  text-align: left;
+}
+
+.benefits__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-image: url('../assets/photos/Subtract.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 50%; 
+}
+
+.benefits__item {
+  padding: clamp(30px, 4vw, 60px) 40;
+  border-top: 1px solid #101010;
+  padding-right: 90px;
+}
+
+.benefits__grid .benefits__item:nth-child(even) {
+  padding-right: 0;
+  padding-left: 90px;
+}
+
+.benefits__item-title {
+  font-size: clamp(20px, 2.5vw, 35px);
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.benefits__item-text {
+  font-size: clamp(16px, 1.2vw, 20px);
+  line-height: 1.5;
+  color: black;
+}
+
+
+.benefits__item:nth-last-child(1),
+.benefits__item:nth-last-child(2) {
+  border-bottom: 1px solid #101010;
+}
+
+
+@media (max-width: 992px) {
+  .benefits__grid {
+    grid-template-columns: 1fr;
+    background-size: 80%; 
+  }
+
+  .benefits__main-title{
+    text-align: center;
+  }
+
+  .benefits__item {
+    padding-right: 0;
+    padding-left: 0 !important;
+  }
+
+  .benefits__item:nth-last-child(1) {
+    display: none;
+  }
+
+  .benefits__item:nth-child(2) {
+  text-align: right;
+  }
+  .benefits__item:nth-child(4) {
+  text-align: right;
+  }
+}

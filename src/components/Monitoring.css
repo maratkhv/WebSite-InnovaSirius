@@ -1,0 +1,253 @@
+.monitoring {
+  padding: 50px 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.container{
+    max-width: 1500px;
+}
+
+.monitoring__title {
+  font-family: 'TT Travels';
+  font-size: clamp(25px, 4vw, 56px);
+  justify-self: start;
+  line-height: 1.1;
+  font-weight: 500;
+  margin-bottom: 50px;
+  color: #000000;
+}
+
+.monitoring__desktop-view {
+  display: block;
+}
+
+.monitoring__mobile-accordion {
+  display: none;
+}
+
+.monitoring__tabs-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: hidden;
+}
+.monitoring__tabs-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.monitoring__tabs-list {
+  display: inline-flex;
+  position: relative;
+  background: #F5F9FF;
+  border-radius: 11px;
+  border: 2px solid;
+  padding: 5px 0;
+  top: 15px;
+}
+
+.monitoring__tabs-indicator {
+  position: absolute;
+  top: 0px;
+  bottom: 1px;
+  background-color: #ffffff;
+  border-radius: 11px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
+  border: 2px solid;
+  border-top: 0;
+}
+
+.monitoring__tab-btn {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  border: none;
+  padding: 12px 24px;
+  font-size: clamp(14px, 1.1vw, 16px);
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  font-family: 'TT Travels';
+}
+
+.monitoring__content-box {
+  border: 2px solid;
+  border-radius: 0px 20px 20px 20px; 
+  padding: 40px;
+  background: linear-gradient(180deg, #ffffff 50%, #E8F0FE 100%);
+  transition: opacity 0.3s ease, transform 0.1s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.monitoring__content-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.monitoring__arrows {
+  font-size: 24px;
+  color: #000000;
+}
+
+.monitoring__heading {
+  font-size: clamp(18px, 1.8vw, 32px);
+  font-weight: 500;
+  margin: 0;
+}
+
+.monitoring__content-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.monitoring__visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.monitoring__photo-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 2px solid;
+  border-radius: 40px 10px 40px 10px; 
+  overflow: hidden;
+  position: relative;
+}
+
+.monitoring__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.monitoring__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.monitoring__point-title {
+  font-size: clamp(16px, 1.2vw, 22px);
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: #1a1a1a;
+}
+
+.monitoring__point-desc {
+  font-size: clamp(14px, 1.1vw, 20px);
+  margin: 0;
+}
+
+.monitoring__accordion-item {
+  border-top: 1px solid #E0E0E0;
+}
+
+.monitoring__accordion-item:last-child {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.monitoring__accordion-header {
+  width: 100%;
+  text-align: center;
+  background: none;
+  border: none;
+  padding: 20px 10px;
+  font-family: 'TT Travels', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.monitoring__accordion-body {
+  display: grid;
+  grid-template-rows: 0fr; 
+  transition: grid-template-rows 0.4s ease-out;
+  background: linear-gradient(180deg, #ffffff 0%, #E8F0FE 100%);
+}
+
+.monitoring__accordion-content {
+  overflow: hidden; 
+  padding: 0 15px;
+}
+
+.monitoring__accordion-item.is-open .monitoring__accordion-body {
+  grid-template-rows: 1fr;
+}
+
+.monitoring__accordion-item.is-open .monitoring__accordion-header {
+  font-weight: 600;
+}
+
+.is-open .monitoring__accordion-content {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+  .monitoring__title{
+    font-size: clamp(23px, 4vw, 56px);
+    text-align: center;
+    margin: 50px auto;
+    padding: 0 3vw;
+  }
+
+  .monitoring__desktop-view {
+    display: none;
+  }
+
+  .monitoring__mobile-accordion {
+    display: block; 
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .monitoring__accordion-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .monitoring__content-header {
+    margin-bottom: 20px;
+  }
+
+  .monitoring__text-content {
+    order: 1; 
+    margin-bottom: 30px;
+  }
+
+  .monitoring__visual {
+    order: 2; 
+  }
+
+  .monitoring__photo-frame {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 600px) {
+  .monitoring__content-box {
+    padding: 20px;
+  }
+  
+  .monitoring__tab-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}

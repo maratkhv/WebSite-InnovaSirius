@@ -1,0 +1,137 @@
+.achiev {
+  padding: 80px 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle at center, #A8C8FF 0%, #ffffff 45%);
+  font-family: 'TT Travels';
+}
+
+.achiev__title {
+  font-family: 'TT Travels';
+  font-weight: 400;
+  font-size: clamp(32px, 4vw, 64px);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.achiev__carousel-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+  aspect-ratio: 1200 / 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.achiev__image-layer {
+  position: absolute;
+  top: 7%;
+  right: 4%;
+  width: 60%; 
+  height: 83%;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 33.59px;
+}
+
+.achiev__main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.achiev__shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 10; 
+  pointer-events: none;
+}
+
+.achiev__top-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.achiev__text-container {
+  width: 30%;
+  margin-left: 10%;
+  pointer-events: auto;
+}
+
+.achiev__description {
+  font-family: 'TT Travels';
+  font-size: clamp(16px, 1.4vw, 26px);
+  color: #000;
+  line-height: 1.4;
+}
+
+.achiev__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  z-index: 30;
+  pointer-events: auto;
+}
+
+.achiev__btn:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.achiev__btn--prev { left: 0; }
+.achiev__btn--next { right: 0; }
+
+@media (max-width: 992px) {
+  .achiev__carousel-wrapper {
+    aspect-ratio: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .achiev__image-layer {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: 30%;
+    border-radius: 20px;
+    order: 1;
+  }
+
+  .achiev__top-layer {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    padding: 20px;
+    order: 2;
+  }
+
+  .achiev__text-container {
+    width: 100%;
+    margin-left: 10%;
+  }
+
+  .achiev__shape {
+    display: none;
+  }
+
+  .achiev__btn {
+    top: auto;
+    bottom: -60px;
+  }
+}

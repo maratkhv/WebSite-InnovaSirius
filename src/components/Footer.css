@@ -1,0 +1,145 @@
+.footer {
+  background-color: #D2E3FF;
+  color: #000000;
+  padding: clamp(40px, 3vw, 60px) 0;
+  font-family: 'TT Travels', 'Helvetica';
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__container {
+  width: 90%;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: clamp(10px, 2vw, 20px);
+}
+
+.footer__info {
+  flex: 1;
+}
+
+.footer__title {
+  font-size: clamp(32px, 2vw, 58px);
+  margin-bottom: clamp(30px, 1vw);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.footer__contact-block {
+  margin-bottom: 25px;
+}
+
+.footer__text {
+  display: block;
+  font-size: clamp(18px, 1vw, 24px);
+  text-decoration: none;
+  color: #1A1A1A;
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+
+.footer__btn {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 60px;
+  font-size: clamp(16px, 1vw, 20px);
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  font-family: 'TT Travels';
+  font-weight: 400;
+}
+
+.footer__btn:hover {
+  opacity: 0.9;
+}
+
+.footer__btn:active {
+  transform: scale(0.98);
+}
+
+.footer__scroll-top {
+  background: transparent;
+  border: clamp(2px, 0.2vw, 4px) solid #1A1A1A;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  width: clamp(60px, 5vw, 87px);
+  height: clamp(60px, 5vw, 87px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-top: 20px;
+}
+
+.footer__scroll-top:hover {
+  background-color: #000000;
+}
+
+.footer__scroll-top:hover .footer__arrow {
+  border-color: white;
+}
+
+.footer__arrow {
+  margin-top: 10%; 
+  width: 25%;
+  height: 25%;
+  border-right: clamp(4px, 0.4vw, 8px) solid;
+  border-bottom: clamp(4px, 0.4vw, 8px) solid;
+  transform: rotate(225deg);
+  transition: border-color 0.3s ease;
+}
+
+.footer__bottom {
+  padding-top: 20px;
+}
+
+.footer__legal {
+  font-size: clamp(14px, 1vw, 20px);
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.footer__legal a {
+  color: #0066FF;
+  text-decoration: underline;
+}
+
+.footer__copyright {
+  font-size: clamp(14px, 1vw, 20px);
+  font-weight: 700;
+  font-family: 'Helvetica';
+}
+
+
+@media (max-width: 480px) {
+.footer__top {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer__title {
+    font-size: 28px;
+  }
+  
+  .footer__scroll-top {
+    align-self: flex-end;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    z-index: 100;
+  }
+}
