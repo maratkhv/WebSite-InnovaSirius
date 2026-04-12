@@ -40,7 +40,7 @@
   border: none;
   text-align: left;
   cursor: pointer;
-  font-size: clamp(16px, 1vw, 24px);
+  font-size: clamp(17px, 1.1vw, 25px);
   font-weight: 400;
   color: #1A1A1A;
   transition: color 0.3s ease;
