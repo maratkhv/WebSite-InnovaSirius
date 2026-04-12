@@ -40,8 +40,8 @@ export default function ContactForm() {
               />
               <input 
                 type="text" 
-                name="lastName" 
-                placeholder="Фамилия" 
+                name="company" 
+                placeholder="Организация" 
                 className="contact__input"
                 onChange={handleChange}
               />

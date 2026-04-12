@@ -13,7 +13,7 @@
 }
 
 .principle__title {
-  width: 80%;
+  width: 100%;
   font-family: 'TT Travels', sans-serif;
   font-size: clamp(32px, 4vw, 64px);
   line-height: 1.1;
