@@ -24,6 +24,7 @@
   min-width: 100%;
   border-top: 3px solid black;
   opacity: 0.6;
+  margin-bottom: 60px;
 }
 
 .hero__card-wrapper {
@@ -182,6 +183,10 @@
   .hero {
     padding-top: 0;
     min-height: auto;
+  }
+
+  .hero__line{
+    margin: 0;
   }
 
   .hero__header {
