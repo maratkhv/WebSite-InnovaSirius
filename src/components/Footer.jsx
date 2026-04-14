@@ -1,5 +1,6 @@
 import './Footer.css';
 import pdf from '../assets/pdf/Политика конфиденциальности персональных данных InnovsSirius.pdf';
+import { scrollToElement } from '../utilits/scroll.js';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -32,7 +33,7 @@ export default function Footer() {
               <a className="footer__text">InnovaSirius@mail.ru</a>
             </div>
 
-            <button className="footer__btn" onClick={scrollToForm}>Оставить заявку</button>
+            <button className="footer__btn" onClick={() => scrollToElement('order-form', 1500)}>Оставить заявку</button>
           </div>
 
           <button className="footer__scroll-top" onClick={scrollToTop}>

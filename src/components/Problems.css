@@ -102,9 +102,14 @@
 .problems__card:hover .problems__card-bg {
   opacity: 1;
 }
+@media (max-width: 1405px){
+  .problems__card-title {
+    font-size: clamp(12px, 1.8vw, 25px);
+  }
+}
 
-@media (max-width: 1300px) {
-  
+
+@media (max-width: 768px) {
   .problems__grid {
     padding: 0;
     grid-template-columns: repeat(2, 1fr);
@@ -115,12 +120,7 @@
     grid-column: auto;
     grid-row: auto;
   }
-}
-
-@media (max-width: 768px) {
-  .problems__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  
   .problems__card {
     border-radius: 30px;
   }
@@ -137,6 +137,11 @@
   .problems__card-text {
   text-align: center;
   }
+
+  .problems__card-title {
+  font-size: clamp(16px, 2.5vw, 30px);
+  }
+
   .problems__card:last-child {
     grid-column: 1 / -1;
     max-width: 50%;

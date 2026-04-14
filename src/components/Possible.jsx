@@ -6,6 +6,7 @@ import icon1 from '../assets/photos/NoEye.png';
 import icon2 from '../assets/photos/Smoke.png';
 import icon3 from '../assets/photos/OK.png';
 import icon4 from '../assets/photos/BELL.png';
+import { scrollToElement } from '../utilits/scroll.js';
 
 const scrollToForm = () => {
     const formElement = document.getElementById('order-form');
@@ -60,7 +61,7 @@ export default function Possible() {
               ))}
             </ul>
 
-            <button className="possible__btn" onClick={scrollToForm}>Оставить заявку</button>
+            <button className="possible__btn" onClick={() => scrollToElement('order-form', 2300)}>Оставить заявку</button>
           </div>
         </div>
       </div>

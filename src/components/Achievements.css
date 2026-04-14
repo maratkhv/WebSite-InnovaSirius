@@ -113,23 +113,25 @@
     display: flex;
     flex-direction: column;
   }
+
+  .achiev__description{
+    text-align: center;
+  }
   
   .achiev__image-layer {
     position: relative;
     top: 0;
     right: 0;
-    width: 90%;
-    height: 30%;
+    width: 60vw;
+    height: 40vw;
     border-radius: 20px;
     order: 1;
   }
 
   .achiev__main-img {
-    width: 90vw;
-    height: 50vw;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    display: flex;
-    justify-self: center;
   }
 
   .achiev__top-layer {
@@ -142,7 +144,7 @@
 
   .achiev__text-container {
     width: 100%;
-    margin-left: 10%;
+    margin-left: 0;
   }
 
   .achiev__shape {
