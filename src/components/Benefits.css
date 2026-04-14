@@ -27,7 +27,7 @@
 }
 
 .benefits__item {
-  padding: clamp(30px, 4vw, 60px) 40;
+  padding: clamp(30px, 4vw, 60px) 40px;
   border-top: 1px solid #101010;
   padding-right: 90px;
 }

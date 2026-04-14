@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './ContactForm.css';
 
 export default function ContactForm() {
@@ -15,7 +15,9 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState(null);
-  const [attemptedSubmit, setAttemptedSubmit] = useState(false); // Для подсветки ошибок
+  const [attemptedSubmit, setAttemptedSubmit] = useState(false);
+
+  const textareaRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -24,12 +26,19 @@ export default function ContactForm() {
       [name]: type === 'checkbox' ? checked : value
     }));
   };
+  
+  const handleTextareaInput = (e) => {
+    handleChange(e); 
+    
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto'; 
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`; 
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setAttemptedSubmit(true);
-
-    // Валидация важных полей
     const isFormValid = 
       formData.name.trim() !== '' && 
       formData.phone.trim() !== '' && 
@@ -57,6 +66,7 @@ export default function ContactForm() {
       setIsSuccess(true);
       setAttemptedSubmit(false);
 
+      // Очистка формы
       setFormData({
         name: '',
         organization: '',
@@ -66,6 +76,9 @@ export default function ContactForm() {
         consentDataProcessing: false,
         consentPromo: false
       });
+      if (textareaRef.current) {
+        textareaRef.current.style.height = 'auto';
+      }
 
     } catch (err) {
       console.error(err);
@@ -134,17 +147,18 @@ export default function ContactForm() {
 
             <div className="contact__row contact__row--full">
              <textarea 
+              ref={textareaRef}
               name="problemDescription" 
               placeholder="Опишите свою проблему" 
               className="contact__input contact__textarea"
               rows="1"
               value={formData.problemDescription}
-              onChange={handleChange}
+              onChange={handleTextareaInput}
              ></textarea>
             </div>
 
             <div className="contact__checkboxes">
-              <label className={`contact__checkbox-label ${isInvalid('agreement') ? 'contact__checkbox-label--error' : ''}`}>
+              <label className={`contact__checkbox-label ${isInvalid('consentDataProcessing') ? 'contact__checkbox-label--error' : ''}`}>
                 <input 
                   type="checkbox" 
                   name="consentDataProcessing" 
