@@ -229,6 +229,12 @@
   to { transform: scale(1); opacity: 1; }
 }
 
+@media (max-width: 1300px) {
+  .contact__wrapper {
+    padding: 2vw;
+  }
+}
+
 @media (max-width: 768px) {
   .contact {
     padding: 40px 0;
