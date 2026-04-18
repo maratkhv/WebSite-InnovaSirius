@@ -164,11 +164,11 @@
   margin: 0  auto;
 }
 
-.hero__btn:hover {
+.contact__btn:hover {
   opacity: 0.9;
 }
 
-.hero__btn:active {
+.contact__btn:active {
   transform: scale(0.98);
 }
 
