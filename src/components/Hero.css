@@ -10,7 +10,10 @@
 }
 
 .hero__container {
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero__header {
