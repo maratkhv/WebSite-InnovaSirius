@@ -39,6 +39,7 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setAttemptedSubmit(true);
+
     const isFormValid = 
       formData.name.trim() !== '' && 
       formData.phone.trim() !== '' && 
@@ -51,14 +52,22 @@ export default function ContactForm() {
     setError(null);
 
     try {
-      const API_URL = import.meta.env.VITE_API_URL || "";
+      const requestBody = {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        organization: formData.organization,
+        message: formData.problemDescription,
+        ads: formData.consentPromo ? 1 : 0,
+        policy: formData.consentDataProcessing ? 1 : 0,
+      };
 
-      const res = await fetch(`${API_URL}/api/contact/submit`, {
+      const res = await fetch(`http://0109.vms.iaas.store/v1/api/ticket`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(requestBody),
       });
 
       if (!res.ok) throw new Error("Ошибка отправки");
@@ -66,7 +75,6 @@ export default function ContactForm() {
       setIsSuccess(true);
       setAttemptedSubmit(false);
 
-      // Очистка формы
       setFormData({
         name: '',
         organization: '',
@@ -76,6 +84,7 @@ export default function ContactForm() {
         consentDataProcessing: false,
         consentPromo: false
       });
+
       if (textareaRef.current) {
         textareaRef.current.style.height = 'auto';
       }
