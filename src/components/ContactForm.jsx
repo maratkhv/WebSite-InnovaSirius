@@ -62,7 +62,7 @@ export default function ContactForm() {
         policy: formData.consentDataProcessing ? 1 : 0,
       };
 
-      const res = await fetch(`http://0109.vms.iaas.store/v1/api/ticket`, {
+      const res = await fetch(`http://api.innovasirius.com/v1/api/ticket`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
